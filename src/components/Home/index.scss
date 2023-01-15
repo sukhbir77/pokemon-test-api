@@ -132,8 +132,6 @@ select {
             font-weight: 400;
         }
     }
-
-    @media only screen and (max-width: 800px) {}
 }
 
 .pokemon-card {
@@ -150,9 +148,6 @@ select {
         @media only screen and (max-width: 800px) {
             width: 250px;
             height: 250px;
-            content: "";
-            clear: both;
-            display: table;
         }
     }
 
