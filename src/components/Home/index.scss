@@ -1,0 +1,306 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+    background-color: #f9fbff;
+}
+
+.body {
+    background-color: #f9fbff;
+}
+
+.app-container {
+    margin: auto;
+    width: 70%;
+    background-color: #f9fbff;
+
+    img {
+        margin-top: 20px;
+    }
+}
+
+.drop-down-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: #3fadd0;
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 90px;
+    padding: 0 15px;
+    justify-content: center;
+}
+
+.drop-down-label {
+    p {
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
+        font-family: sans-serif;
+    }
+}
+
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-weight: 400;
+    font-family: sans-serif;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    z-index: 1;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    outline: none;
+}
+
+.select * {
+    padding: 0 5px
+}
+
+.select {
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    margin-top: 5px;
+
+    select,
+    &::after {
+        grid-area: select;
+    }
+
+    width: 100%;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+
+    // Custom arrow
+    &:not(.select--multiple)::after {
+        content: "";
+        justify-self: end;
+        width: 0.8em;
+        height: 0.5em;
+        background-color: var(--select-arrow);
+        clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    }
+}
+
+
+.pokemon-container {
+    background-color: #ffffff;
+    margin-top: 30px;
+    padding: 25px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+
+    .offer-button {
+        display: flex;
+        height: 50px;
+        width: 200px;
+        background-color: #f2994a;
+        margin-top: 25px;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        cursor: pointer;
+
+        p {
+            color: white;
+            font-size: 20px;
+            font-family: sans-serif;
+            font-weight: 400;
+        }
+    }
+
+    @media only screen and (max-width: 800px) {}
+}
+
+.pokemon-card {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        width: 450px;
+        height: 450px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+        float: left;
+
+        @media only screen and (max-width: 800px) {
+            width: 250px;
+            height: 250px;
+            content: "";
+            clear: both;
+            display: table;
+        }
+    }
+
+    .pokemon-information {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15px;
+        justify-content: space-around;
+
+        @media only screen and (max-width: 1200px) {
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+        }
+    }
+
+    .heading {
+        color: #63aec9;
+        font-size: 30px;
+        font-weight: 400;
+        font-family: sans-serif;
+
+        @media only screen and (max-width: 800px) {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    }
+
+    .information-label {
+        color: #929292;
+        font-size: 18px;
+        font-weight: 400;
+        font-family: sans-serif;
+
+        @media only screen and (max-width: 800px) {
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    }
+
+    .abilities {
+        display: flex;
+        margin-top: 10px;
+
+        div {
+            margin-right: 10px;
+            background-color: #56ccf2;
+            padding: 5px 15px;
+            border-radius: 25px;
+
+            h2 {
+                color: #e5f7fd;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 400;
+
+                @media only screen and (max-width: 800px) {
+                    font-size: 15px;
+                }
+            }
+
+            h2::first-letter {
+                text-transform: capitalize;
+            }
+
+            @media only screen and (max-width: 800px) {
+                padding: 5px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .stats {
+        display: flex;
+        margin-top: 10px;
+
+        div {
+            display: flex;
+            margin-right: 10px;
+            background-color: #27ae60;
+            padding: 5px 15px;
+            border-radius: 25px;
+
+            h2 {
+                color: #e5f7fd;
+                font-size: 18px;
+                font-family: sans-serif;
+                font-weight: 400;
+
+                @media only screen and (max-width: 800px) {
+                    font-size: 15px;
+                }
+            }
+
+            h2::first-letter {
+                text-transform: capitalize;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                width: 150px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media only screen and (max-width: 1200px) {
+            flex-direction: column;
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+}
+
+.heading-title::first-letter {
+    text-transform: capitalize;
+}
+
+.pokemon-offer-modal {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+
+    input {
+        height: 50px;
+        width: 200px;
+        border: 1px solid #63aec9;
+        border-radius: 10px;
+        margin-top: 30px;
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 400;
+        text-align: center;
+        align-self: center;
+    }
+
+    p {
+        font-size: 15px;
+        font-family: sans-serif;
+        font-weight: 400;
+        color: red;
+        margin-top: 10px;
+    }
+
+    input:focus {
+        border: 1px solid #27ae60;
+    }
+}
