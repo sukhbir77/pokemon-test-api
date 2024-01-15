@@ -1,6 +1,6 @@
 # Pokemon Website using PokeAPI
 
-This repository houses a Pokemon website that fetches data about Pokemon from the [PokeAPI](https://pokeapi.co/) and displays it on the website. The project is built using TypeScript, SCSS, React, and JavaScript.
+This repository houses a Pokemon website that fetches data about Pokemon from the [PokeAPI](https://pokeapi.co/) and displays it on the website. The project is built using TypeScript, SCSS, React, and JavaScript. Cypress is employed for automated testing.
 
 ## Features
 
@@ -8,6 +8,7 @@ This repository houses a Pokemon website that fetches data about Pokemon from th
 - **React Components:** The website is built using React components to ensure modularity and reusability.
 - **TypeScript:** Enhances code quality and provides static typing for a better development experience.
 - **SCSS Styling:** Employs SCSS for styling, allowing for maintainable and organized stylesheets.
+- **Cypress Testing:** Includes automated tests using Cypress to ensure the reliability of the application.
 
 ## How to Run
 
