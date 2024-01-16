@@ -15,4 +15,4 @@ This repository houses a Pokemon website that fetches data about Pokemon from th
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sukhbir77/Pokemon-Test.git
+   git clone https://github.com/sukhbir77/pokemon-test-api.git
